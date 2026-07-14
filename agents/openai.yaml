@@ -1,0 +1,4 @@
+interface:
+  display_name: "小红书公开主页读取器"
+  short_description: "读取小红书公开主页资料、首屏笔记、互动展示值和封面元数据"
+  default_prompt: "使用 $xj-xiaohongshu-public-profile-reader 读取这个公开小红书主页并输出结构化摘要。"
