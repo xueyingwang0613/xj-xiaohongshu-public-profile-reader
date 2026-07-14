@@ -1,21 +1,13 @@
-# Xiaohongshu Public Profile Reader
+# 小红书公开主页读取器（Xiaohongshu Public Profile Reader）
+读取小红书个人主页，快速整理成结构化数据。无需登录、不使用 Cookie、不调用私有接口。输入一个公开的小红书主页链接，即可提取主页资料、公开互动数据、首屏笔记和封面信息，方便后续整理、分析与内容研究。
 
-一个只读取小红书公开主页快照的 Codex Skill。它从公开页面内嵌的 `window.__INITIAL_STATE__` 中提取资料、页面展示的互动数、首屏笔记和封面元数据，并输出结构化 JSON。
+## 你可以获取
+- 昵称、小红书号、简介、IP 属地和头像
+- 页面公开展示的粉丝、获赞与收藏等互动数据
+- 首屏笔记标题、内容类型和点赞展示值
+- 置顶状态
+- 封面地址、宽度和高度
 
-## 使用
-
-```bash
-python3 scripts/read_profile.py "https://www.xiaohongshu.com/user/profile/<user-id>" --pretty
-```
-
-也可以解析已下载的 HTML：
-
-```bash
-python3 scripts/read_profile.py \
-  --html-file /path/to/profile.html \
-  --source-url "https://www.xiaohongshu.com/user/profile/<user-id>" \
-  --pretty
-```
 
 ## 数据边界
 
@@ -25,16 +17,5 @@ python3 scripts/read_profile.py \
 - 笔记仅代表公开首屏快照，不是完整历史。
 - 不提供曝光、点击率、收藏、完播率、粉丝转化或收入等创作者后台数据。
 
-## 目录
-
-```text
-.
-├── SKILL.md
-├── agents/openai.yaml
-└── scripts/read_profile.py
-```
-
-## 依赖
-
-- Python 3
-- `curl`（仅在线读取公开主页时需要）
+## 使用方法
+复制：https://github.com/xueyingwang0613/xj-xiaohongshu-public-profile-reader ，安装该skill
